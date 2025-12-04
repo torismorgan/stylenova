@@ -97,8 +97,8 @@ body {
 
 .nova-podium {
   position: relative;
-  width: 309px;
-  height: 583.125px;
+  width: 280px;
+  height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -132,7 +132,7 @@ body {
 /* OUTER CARD */
 .intro-card {
   width: 720px; 
-  height: 520px;                /* same as Figma width */
+  height: 490px;                /* same as Figma width */
   background-color: #FFC6D5;
   border-radius: 32px;
   border: 2px solid #f05aa7;
