@@ -56,12 +56,6 @@ body {
   justify-content: space-between;
 }
 
-.top-bar__logo {
-  font-family: "Rubik Bubbles", cursive;
-  font-size: 30px;
-  letter-spacing: 0.03em;
-}
-
 .top-bar__tagline {
   font-family: "Comfortaa", sans-serif;
   font-size: 28px;
@@ -91,14 +85,13 @@ body {
 
  
 .logo-image {
-  height: 80px;      /* adjust to match your Figma */
+  height: 60px;      /* adjust to match your Figma */
   width: auto;
   display: block;
 }
 
 .intro-layout__nova {
   margin-left: 0; 
-      /* ensure no accidental margin */
   transform: translateX(-40px); /* adjust LEFT/RIGHT by changing value */
 }
 
@@ -106,7 +99,6 @@ body {
   position: relative;
   width: 309px;
   height: 583.125px;
-  margin-left: -220px;
   display: flex;
   align-items: center;
   justify-content: center;
