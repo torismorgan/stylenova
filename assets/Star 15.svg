@@ -1,0 +1,23 @@
+<svg width="51" height="49" viewBox="0 0 51 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_n_4_67)">
+<path d="M29.9579 1.69327C30.2461 1.32837 30.8328 1.52034 30.8498 1.98495L31.3729 16.5639C31.4255 18.0306 32.3875 19.3089 33.7824 19.7653L48.7041 24.6446C48.8539 24.6936 48.9271 24.766 48.9698 24.8312C49.0196 24.9072 49.0518 25.0137 49.0481 25.1352C49.0444 25.2566 49.0059 25.3607 48.9516 25.4335C48.9051 25.4959 48.8274 25.5642 48.675 25.604L34.5693 29.286C32.9832 29.7001 31.8962 31.1596 31.9548 32.7978L32.4521 46.6573C32.4693 47.1364 31.868 47.3626 31.5652 46.9909L21.6234 34.7817C20.7579 33.7187 19.3511 33.2587 18.0248 33.6049L2.79111 37.5818C2.32719 37.703 1.97486 37.1648 2.27177 36.7884L10.8615 25.9003C11.8767 24.6132 11.8629 22.7938 10.8279 21.5226L1.62186 10.2177C1.52242 10.0956 1.50101 9.99487 1.50032 9.91699C1.49953 9.82623 1.52908 9.71917 1.59775 9.61904C1.66658 9.51881 1.75643 9.4522 1.84151 9.42031C1.91439 9.39305 2.01576 9.37768 2.16519 9.42649L17.0869 14.3059C18.482 14.762 20.0132 14.2989 20.9223 13.1466L29.9579 1.69327Z" stroke="#5B57E0" stroke-opacity="0.3" stroke-width="3"/>
+</g>
+<defs>
+<filter id="filter0_n_4_67" x="0" y="0" width="50.549" height="48.6799" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feTurbulence type="fractalNoise" baseFrequency="2 2" stitchTiles="stitch" numOctaves="3" result="noise" seed="7715" />
+<feColorMatrix in="noise" type="luminanceToAlpha" result="alphaNoise" />
+<feComponentTransfer in="alphaNoise" result="coloredNoise1">
+<feFuncA type="discrete" tableValues="1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 "/>
+</feComponentTransfer>
+<feComposite operator="in" in2="shape" in="coloredNoise1" result="noise1Clipped" />
+<feFlood flood-color="rgba(0, 0, 0, 0.25)" result="color1Flood" />
+<feComposite operator="in" in2="noise1Clipped" in="color1Flood" result="color1" />
+<feMerge result="effect1_noise_4_67">
+<feMergeNode in="shape" />
+<feMergeNode in="color1" />
+</feMerge>
+</filter>
+</defs>
+</svg>
