@@ -8,8 +8,14 @@
   box-sizing: border-box;
 }
 
+html,
 body {
   margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
   font-family: "Comfortaa", sans-serif;
   background-color: #EEB3D8; /* fallback */
   color: #5a2242;
@@ -21,44 +27,44 @@ body {
 
 .app {
   width: 100%;
-  margin: 0 auto;
-  max-width: 100%;
+  max-width: 1400px;
   min-height: 100vh;
-  background-image: url("assets/stars\ bkg.png");
-  background-size:85%;
+
+  margin: 0 auto;
+  padding: 60px 40px 40px;  /* top, left/right, bottom */
+
+  background-image: url("assets/stars-bkg.png"); /* rename file to remove space */
+  background-size: 85%;
   background-position: center;
   background-repeat: no-repeat;
-
-  padding: 80px 40px 40px;
 }
-
 
 /* ----------------------------
    TOP BAR
 ---------------------------- */
 
 .top-bar {
+  width: 100%;
+  max-width: 1300px;
+
+  margin: 0 auto 50px;      /* top space, then 50px below */
+  padding: 24px 60px;
+
   background: #f05aa7;
   color: #fff;
   border-radius: 60px;
-  padding: 28px 60px;        /* bigger vertical + horizontal padding */
 
-  /* Control the width */
-  width: calc(100% - 120px); /* gives 60px left/right breathing room */
-  margin: 0px auto 60px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .top-bar__tagline {
-  font-family: "Comfortaa", sans-serif;
-  font-size: 28px;
-
+  font-size: 26px;
 }
 
 /* ----------------------------
-   INTRO SCREEN
+   SCREEN VISIBILITY
 ---------------------------- */
 
 .screen {
@@ -69,35 +75,41 @@ body {
   display: block;
 }
 
+/* ----------------------------
+   INTRO LAYOUT
+---------------------------- */
+
 .intro-layout {
   display: flex;
-  align-items: flex-start;
+  align-items: center;      /* vertically align Nova + card */
   justify-content: flex-start;
-  gap: 60px;         /* space between podium and card */
-  max-width: 1400px;
-  margin: 40px auto;
+  gap: 70px;
+
+  max-width: 1300px;
+  margin: 40px auto 0;
 }
 
- 
 .logo-image {
-  height: 60px;      /* adjust to match your Figma */
+  height: 60px;
   width: auto;
   display: block;
 }
 
+/* --- Nova / podium --- */
+
 .intro-layout__nova {
-  margin-left: 0; 
-  transform: translate(-20px, 10px); /* adjust LEFT/RIGHT by changing value */
+  /* tweak X/Y with translate if you want */
+  transform: translate(0, 0);
 }
 
 .nova-podium {
   position: relative;
-  width: 310px;
-  height: 584px;
+  width: 320px;
+  height: 580px;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 70px;
 }
 
 .nova-podium__base {
@@ -114,62 +126,60 @@ body {
   object-fit: contain;
 }
 
+/* --- Intro card wrapper --- */
+
+.intro-layout__card {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
 /* ----------------------------
    INTRO CARD
 ---------------------------- */
 
-.intro-layout__card {
-  display: flex;
-  justify-content: center;
-  margin-top: 120px;
-}
-
-/* OUTER CARD */
 .intro-card {
-  transform: translate(20px, -10px); 
-  width: 720px; 
-  height: 490px;                /* same as Figma width */
+  width: 720px;
+  max-width: 100%;
+  height: 490px;
+
   background-color: #FFC6D5;
   border-radius: 32px;
   border: 2px solid #f05aa7;
+  overflow: hidden;
   text-align: center;
-  padding: 0;
-  overflow: hidden;             /* so header corners match the card */
+
+  box-shadow: 0 12px 20px rgba(240, 90, 167, 0.3);
+
+  /* fine-tune card position here */
+  transform: translate(10px, 0); /* X = left/right, Y = up/down */
 }
 
+/* header bar on the card */
 
-
-/* PINK HEADER BAR */
 .intro-card__header {
   background: #d5388a;
   color: #fff;
 
-  width: 100%;                  /* fill the card width */
-  padding: 22px 40px;           /* controls bar height */
+  width: 100%;
+  padding: 22px 40px;
 
   font-size: 26px;
   font-weight: 600;
-  text-align: center;
-  font-family: "Comfortaa", sans-serif;
-
-  /* no radius needed – the card provides the rounded corners */
-  border-radius: 0;
 }
 
+/* content inside card */
+
 .intro-card__content {
-  padding-top: 50px;   /* instead of 36px */
-  padding-bottom: 44px;
+  padding: 50px 60px 44px;
 }
 
 .intro-card__body {
-  font-size: 26px;
-  line-height: 1.7;
+  font-size: 24px;
+  line-height: 1.6;
   font-weight: 700;
   color: #D5338A;
-line-height: normal;
 }
-
-
 
 /* ----------------------------
    BUTTONS
@@ -181,7 +191,7 @@ line-height: normal;
   cursor: pointer;
 
   font-family: "Comfortaa", sans-serif;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 600;
 
   padding: 16px 48px;
@@ -189,12 +199,11 @@ line-height: normal;
 }
 
 .btn--primary {
-  background-color: #d5388a; ;
+  background-color: #d5388a;
   color: #fff;
   box-shadow: 0 6px 12px rgba(240, 90, 167, 0.5);
-  margin-top: 80px;
+  margin-top: 60px;
 }
-
 
 .btn--primary:hover {
   transform: translateY(-1px);
@@ -207,17 +216,34 @@ line-height: normal;
 }
 
 /* ----------------------------
-   RESPONSIVE
+   RESPONSIVE (basic)
 ---------------------------- */
 
 @media (max-width: 900px) {
-  .intro-layout {
-    grid-template-columns: 1fr;
-  }
-
   .top-bar {
     flex-direction: column;
-    gap: 6px;
+    gap: 8px;
     text-align: center;
+    padding: 18px 24px;
+  }
+
+  .intro-layout {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    margin-top: 30px;
+  }
+
+  .intro-card {
+    transform: translate(0, 0);
+    height: auto;
+  }
+
+  .intro-card__content {
+    padding: 32px 24px 36px;
+  }
+
+  .btn--primary {
+    margin-top: 32px;
   }
 }
