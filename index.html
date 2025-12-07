@@ -66,6 +66,88 @@
 </div>
 
       </section>
+      <!-- EVENT ONE — CASUAL WORK DAY -->
+<section id="event1" class="screen">
+  <div class="event-layout">
+
+    <!-- Nova Podium -->
+    <div class="event-nova">
+      <div class="nova-podium">
+        <img src="assets/podiumcorr.png" class="nova-podium__base" />
+        <img src="assets/regular.png" class="nova-podium__nova" />
+      </div>
+    </div>
+
+    <!-- Event card -->
+    <div class="event-card">
+      <div class="event-card__header">EVENT ONE: CASUAL WORK DAY</div>
+
+      <p class="event-card__description">
+        nova’s starting her morning at work — she wants something comfy, clean,
+        and cute enough to get through her tasks. help her pick the outfit that fits
+        a chill work vibe.
+      </p>
+
+      <!-- Outfit choices -->
+      <div class="event-options">
+
+        <!-- WRONG OPTION 1 -->
+        <div class="event-option">
+          <img src="assets/casual.png" alt="Option 1" class="event-option__img" />
+          <button class="select-look" data-correct="false">select look</button>
+        </div>
+
+        <!-- WRONG OPTION 2 -->
+        <div class="event-option">
+          <img src="assets/party.png" alt="Option 3" class="event-option__img" />
+          <button class="select-look" data-correct="false">select look</button>
+        </div>
+
+        <!-- CORRECT OPTION -->
+        <div class="event-option">
+          <img src="assets/daydate.png" alt="Correct look" class="event-option__img" />
+          <button class="select-look" data-correct="true">select look</button>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+  <!-- WRONG POPUP -->
+  <div id="event1Wrong" class="popup">
+    <div class="popup-bubble">
+      this ain’t the vibe, bestie!!! let’s give it another go
+      <button class="popup-btn" onclick="closeWrong('event1Wrong')">try again!</button>
+    </div>
+  </div>
+
+  <!-- SUCCESS SCREEN -->
+  <div id="event1Success" class="success-screen">
+
+    <div class="success-layout">
+
+      <!-- Nova image on left -->
+      <div class="success-nova">
+        <img src="daydate.png" class="success-nova-img" />
+      </div>
+
+      <!-- Card -->
+      <div class="success-card">
+        <div class="success-card__header">you ate that, stylist!</div>
+        <p class="success-card__body">
+          nova felt comfy, polished, and totally in her productive era.
+          perfect start to her busy day.
+        </p>
+
+        <button class="btn btn--primary" id="toEvent2Btn">next event</button>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
     </main>
   </div>
 </body>
