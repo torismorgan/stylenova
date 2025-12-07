@@ -45,7 +45,7 @@ body {
 
   /* Control the width */
   width: calc(100% - 120px); /* gives 60px left/right breathing room */
-  margin: 20px auto 60px;
+  margin: 0px auto 60px;
   display: flex;
   align-items: center;
   justify-content: space-between;
