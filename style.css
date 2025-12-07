@@ -25,11 +25,9 @@ body {
   width: 100%;
   max-width: 1400px;
   min-height: 100vh;
-
   margin: 0 auto;
   padding: 60px 40px 40px;  /* top, left/right, bottom */
-
-  background-image: url("assets/stars-bkg.png"); /* rename file to remove space */
+  background-image: url(assets/stars\ bkg.png);
   background-size: 85%;
   background-position: center;
   background-repeat: no-repeat;
