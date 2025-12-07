@@ -4,28 +4,30 @@
   <meta charset="UTF-8" />
   <title>Style Nova ✨</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Rubik+Bubbles&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Rubik+Bubbles&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="app">
     <!-- TOP BAR -->
     <header class="top-bar">
       <div class="top-bar__logo">
-  <img 
-    src="assets/logo.png"
-    alt="Style Nova logo"
-    class="logo-image"
-  />
-</div>
+        <img 
+          src="assets/logo.png"
+          alt="Style Nova logo"
+          class="logo-image"
+        />
+      </div>
 
       <div class="top-bar__tagline">pick the perfect outfit for today’s event</div>
     </header>
 
-    <!-- INTRO SCREEN -->
     <main>
+      <!-- INTRO SCREEN -->
       <section id="introSection" class="screen screen--visible">
         <div class="intro-layout">
           <!-- Nova + podium -->
@@ -42,113 +44,109 @@
                 class="nova-podium__nova"
               />
             </div>
-            </div>
+          </div>
           
+          <!-- Intro card -->
           <div class="intro-layout__card">
-  <div class="intro-card">
+            <div class="intro-card">
+              <div class="intro-card__header">
+                hey there, style star!
+              </div>
 
-    <div class="intro-card__header">
-      hey there, style star!
-    </div>
+              <div class="intro-card__content">
+                <p class="intro-card__body">
+                  meet nova — she’s got a full day ahead and wants to look adorable at every stop.
+                  help her pick the perfect outfit for each moment.
+                </p>
 
-    <div class="intro-card__content">
-      <p class="intro-card__body">
-        meet nova — she’s got a full day ahead and wants to look adorable at every stop.
-        help her pick the perfect outfit for each moment.
-      </p>
-
-      <button class="btn btn--primary">
-        pick her outfit
-      </button>
-    </div>
-
-  </div>
-</div>
-
+                <button class="btn btn--primary" id="startGameBtn">
+                  pick her outfit
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
+
       <!-- EVENT ONE — CASUAL WORK DAY -->
-<section id="event1" class="screen">
-  <div class="event-layout">
+      <section id="event1" class="screen">
+        <div class="event-layout">
 
-    <!-- Nova Podium -->
-    <div class="event-nova">
-      <div class="nova-podium">
-        <img src="assets/podiumcorr.png" class="nova-podium__base" />
-        <img src="assets/regular.png" class="nova-podium__nova" />
-      </div>
-    </div>
+          <!-- Nova Podium -->
+          <div class="event-nova">
+            <div class="nova-podium">
+              <img src="assets/podiumcorr.png" class="nova-podium__base" alt="" />
+              <img src="assets/regular.png" class="nova-podium__nova" alt="Nova" />
+            </div>
+          </div>
 
-    <!-- Event card -->
-    <div class="event-card">
-      <div class="event-card__header">EVENT ONE: CASUAL WORK DAY</div>
+          <!-- Event card -->
+          <div class="event-card">
+            <div class="event-card__header">EVENT ONE: CASUAL WORK DAY</div>
 
-      <p class="event-card__description">
-        nova’s starting her morning at work — she wants something comfy, clean,
-        and cute enough to get through her tasks. help her pick the outfit that fits
-        a chill work vibe.
-      </p>
+            <p class="event-card__description">
+              nova’s starting her morning at work — she wants something comfy, clean,
+              and cute enough to get through her tasks. help her pick the outfit that fits
+              a chill work vibe.
+            </p>
 
-      <!-- Outfit choices -->
-      <div class="event-options">
+            <!-- Outfit choices -->
+            <div class="event-options">
 
-        <!-- WRONG OPTION 1 -->
-        <div class="event-option">
-          <img src="assets/casual.png" alt="Option 1" class="event-option__img" />
-          <button class="select-look" data-correct="false">select look</button>
+              <!-- WRONG OPTION 1 -->
+              <div class="event-option">
+                <img src="assets/casual.png" alt="Option 1" class="event-option__img" />
+                <button class="select-look" data-correct="false">select look</button>
+              </div>
+
+              <!-- WRONG OPTION 2 -->
+              <div class="event-option">
+                <img src="assets/party.png" alt="Option 2" class="event-option__img" />
+                <button class="select-look" data-correct="false">select look</button>
+              </div>
+
+              <!-- CORRECT OPTION -->
+              <div class="event-option">
+                <img src="assets/daydate.png" alt="Correct look" class="event-option__img" />
+                <button class="select-look" data-correct="true">select look</button>
+              </div>
+
+            </div>
+          </div>
         </div>
 
-        <!-- WRONG OPTION 2 -->
-        <div class="event-option">
-          <img src="assets/party.png" alt="Option 3" class="event-option__img" />
-          <button class="select-look" data-correct="false">select look</button>
+        <!-- WRONG POPUP -->
+        <div id="event1Wrong" class="popup">
+          <div class="popup-bubble">
+            this ain’t the vibe, bestie!!! let’s give it another go
+            <button class="popup-btn" id="event1TryAgainBtn">try again!</button>
+          </div>
         </div>
 
-        <!-- CORRECT OPTION -->
-        <div class="event-option">
-          <img src="assets/daydate.png" alt="Correct look" class="event-option__img" />
-          <button class="select-look" data-correct="true">select look</button>
+        <!-- SUCCESS SCREEN -->
+        <div id="event1Success" class="success-screen">
+          <div class="success-layout">
+            <!-- Nova image on left -->
+            <div class="success-nova">
+              <img src="assets/daydate.png" class="success-nova-img" alt="Nova in her work outfit" />
+            </div>
+
+            <!-- Card -->
+            <div class="success-card">
+              <div class="success-card__header">you ate that, stylist!</div>
+              <p class="success-card__body">
+                nova felt comfy, polished, and totally in her productive era.
+                perfect start to her busy day.
+              </p>
+
+              <button class="btn btn--primary" id="toEvent2Btn">next event</button>
+            </div>
+          </div>
         </div>
-
-
-      </div>
-    </div>
-  </div>
-
-  <!-- WRONG POPUP -->
-  <div id="event1Wrong" class="popup">
-    <div class="popup-bubble">
-      this ain’t the vibe, bestie!!! let’s give it another go
-      <button class="popup-btn" onclick="closeWrong('event1Wrong')">try again!</button>
-    </div>
-  </div>
-
-  <!-- SUCCESS SCREEN -->
-  <div id="event1Success" class="success-screen">
-
-    <div class="success-layout">
-
-      <!-- Nova image on left -->
-      <div class="success-nova">
-        <img src="daydate.png" class="success-nova-img" />
-      </div>
-
-      <!-- Card -->
-      <div class="success-card">
-        <div class="success-card__header">you ate that, stylist!</div>
-        <p class="success-card__body">
-          nova felt comfy, polished, and totally in her productive era.
-          perfect start to her busy day.
-        </p>
-
-        <button class="btn btn--primary" id="toEvent2Btn">next event</button>
-      </div>
-    </div>
-
-  </div>
-
-</section>
-
+      </section>
     </main>
   </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
