@@ -126,12 +126,12 @@ body {
 
 /* OUTER CARD */
 .intro-card {
+  transform: translate(20px, -10px); 
   width: 720px; 
   height: 490px;                /* same as Figma width */
   background-color: #FFC6D5;
   border-radius: 32px;
   border: 2px solid #f05aa7;
-  box-shadow: 0 12px 20px rgba(240, 90, 167, 0.3);
   text-align: center;
   padding: 0;
   overflow: hidden;             /* so header corners match the card */
