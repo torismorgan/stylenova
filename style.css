@@ -36,12 +36,13 @@ body {
 
 .event-layout {
   max-width: 1400px;
-  margin: 0 auto;
+  margin: 40px auto 0;   /* 40px top margin, centered – matches intro */
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  gap: 60px;          /* space between podium + card */
+  gap: 60px;             /* space between podium + card */
 }
+
 
 /* Nova on the left */
 .event-nova {
@@ -280,14 +281,14 @@ body {
 ---------------------------- */
 
 .intro-layout {
+  max-width: 1400px;          /* match event-layout */
+  margin: 40px auto 0;        /* same top margin */
   display: flex;
-  align-items: center;      /* vertically align Nova + card */
+  align-items: flex-start;    /* line up with event cards, not centered */
   justify-content: flex-start;
-  gap: 70px;
-
-  max-width: 1300px;
-  margin: 40px auto 0;
+  gap: 60px;                  /* same gap as events */
 }
+
 
 .logo-image {
   height: 60px;
@@ -311,6 +312,8 @@ body {
   align-items: flex-end;
   justify-content: center;
 }
+
+
 
 .nova-podium__base {
   position: absolute;
@@ -443,7 +446,6 @@ body {
 .confetti-layer {
   position: fixed;
   inset: 0;
-  overflow: hidden;
   pointer-events: none;
   z-index: 40;
   display: none;          /* turned on in JS */
