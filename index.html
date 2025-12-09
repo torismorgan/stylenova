@@ -142,6 +142,158 @@
           </div>
         </div>
       </section>
+
+      <!-- EVENT TWO — RED CARPET NIGHT -->
+<section id="event2" class="screen">
+  <div class="event-layout">
+
+    <!-- Nova Podium -->
+    <div class="event-nova">
+      <div class="nova-podium">
+        <img src="assets/podiumcorr.png" class="nova-podium__base" alt="" />
+        <img src="assets/regular.png" class="nova-podium__nova" alt="Nova" />
+      </div>
+    </div>
+
+    <!-- Event card -->
+    <div class="event-card">
+      <div class="event-card__header">EVENT TWO: RED CARPET NIGHT</div>
+
+      <p class="event-card__description">
+        nova has a glamorous red carpet event tonight. cameras, lights,
+        and a whole lot of attention. pick the outfit that actually gives
+        full red carpet glam.
+      </p>
+
+      <!-- Outfit choices -->
+      <div class="event-options">
+
+        <!-- WRONG OPTION 1 (day date) -->
+        <div class="event-option">
+          <img src="assets/daydate.png" alt="Day date look" class="event-option__img" />
+          <button class="select-look" data-correct="false">select look</button>
+        </div>
+
+        <!-- WRONG OPTION 2 (casual) -->
+        <div class="event-option">
+          <img src="assets/casual.png" alt="Casual look" class="event-option__img" />
+          <button class="select-look" data-correct="false">select look</button>
+        </div>
+
+        <!-- ✅ CORRECT OPTION (party as red carpet placeholder) -->
+        <div class="event-option">
+          <img src="assets/party.png" alt="Red carpet glam look" class="event-option__img" />
+          <button class="select-look" data-correct="true">select look</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- WRONG POPUP -->
+    <div id="event2Wrong" class="popup">
+      <div class="popup-bubble">
+        mmm no bestie... red carpet needs full glam 😭 try again!
+        <button class="popup-btn" id="event2TryAgainBtn">try again!</button>
+      </div>
+    </div>
+
+    <!-- SUCCESS SCREEN -->
+    <div id="event2Success" class="success-screen">
+      <div class="success-layout">
+        <!-- Nova image on left -->
+        <div class="success-nova">
+          <img src="assets/party.png" class="success-nova-img" alt="Nova on the red carpet" />
+        </div>
+
+        <!-- Card -->
+        <div class="success-card">
+          <div class="success-card__header">she ate that carpet UP!</div>
+          <p class="success-card__body">
+            she ate that carpet UP! nova looked breathtaking - all eyes were on her tonight.
+          </p>
+
+          <button class="btn btn--primary" id="toEvent3Btn">next event</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EVENT THREE — AFTER PARTY -->
+<section id="event3" class="screen">
+  <div class="event-layout">
+
+    <!-- Nova Podium -->
+    <div class="event-nova">
+      <div class="nova-podium">
+        <img src="assets/podiumcorr.png" class="nova-podium__base" alt="" />
+        <img src="assets/regular.png" class="nova-podium__nova" alt="Nova" />
+      </div>
+    </div>
+
+    <!-- Event card -->
+    <div class="event-card">
+      <div class="event-card__header">EVENT THREE: AFTER PARTY</div>
+
+      <p class="event-card__description">
+        after the red carpet, nova is heading to the after party. fun, flirty,
+        still put together. pick the outfit that actually matches the after party vibe.
+      </p>
+
+      <!-- Outfit choices -->
+      <div class="event-options">
+
+        <!-- WRONG OPTION 1 (casual) -->
+        <div class="event-option">
+          <img src="assets/casual.png" alt="Casual look" class="event-option__img" />
+          <button class="select-look" data-correct="false">select look</button>
+        </div>
+
+        <!-- WRONG OPTION 2 (day date) -->
+        <div class="event-option">
+          <img src="assets/daydate.png" alt="Day date look" class="event-option__img" />
+          <button class="select-look" data-correct="false">select look</button>
+        </div>
+
+        <!-- ✅ CORRECT OPTION (party) -->
+        <div class="event-option">
+          <img src="assets/party.png" alt="After party look" class="event-option__img" />
+          <button class="select-look" data-correct="true">select look</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- WRONG POPUP -->
+    <div id="event3Wrong" class="popup">
+      <div class="popup-bubble">
+        oof... the after party deserves better 😭 try again!
+        <button class="popup-btn" id="event3TryAgainBtn">try again!</button>
+      </div>
+    </div>
+
+    <!-- SUCCESS SCREEN -->
+    <div id="event3Success" class="success-screen">
+      <div class="success-layout">
+
+        <!-- Nova image on left -->
+        <div class="success-nova">
+          <img src="assets/party.png" class="success-nova-img" alt="Nova at the after party" />
+        </div>
+
+        <!-- Card -->
+        <div class="success-card">
+          <div class="success-card__header">after party princess</div>
+          <p class="success-card__body">
+            nova showed up AND showed out - cutest one at the after party, no debate.
+          </p>
+
+          <button class="btn btn--primary" id="toFinalBtn">see results</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
     </main>
   </div>
 
