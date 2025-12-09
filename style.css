@@ -416,6 +416,60 @@ body {
   box-shadow: 0 3px 6px rgba(240, 90, 167, 0.4);
 }
 
+/* ---------- Final screen layout ---------- */
+
+.final-layout {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.final-nova-img {
+  height: 420px;
+  width: auto;
+  display: block;
+}
+
+/* you can tweak this if you want the card a bit wider */
+.final-card .event-card__description {
+  max-width: 520px;
+}
+
+/* ---------- Confetti animation ---------- */
+
+.confetti-layer {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 40;
+  display: none;          /* turned on in JS */
+}
+
+.confetti-piece {
+  position: absolute;
+  top: -10%;
+  width: 8px;
+  height: 14px;
+  border-radius: 3px;
+  opacity: 0.9;
+  animation-name: confetti-fall;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+
+@keyframes confetti-fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(120vh) rotate(360deg);
+  }
+}
+
 /* ----------------------------
    RESPONSIVE (basic)
 ---------------------------- */
