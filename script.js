@@ -208,3 +208,41 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+
+  const confettiLayer = document.getElementById("confettiLayer");
+
+  function startConfetti() {
+    if (!confettiLayer) return;
+
+    confettiLayer.innerHTML = "";
+    confettiLayer.style.display = "block";
+
+    const colors = ["#ffffff", "#ffd1ec", "#ffc6d5", "#f05aa7", "#ffe37f"];
+    const pieces = 120;
+
+    for (let i = 0; i < pieces; i++) {
+      const piece = document.createElement("span");
+      piece.classList.add("confetti-piece");
+
+      const color = colors[i % colors.length];
+      const left = Math.random() * 100;
+      const delay = Math.random() * 2;
+      const duration = 3 + Math.random() * 2;
+      const rotate = Math.random() * 360;
+
+      piece.style.left = left + "%";
+      piece.style.backgroundColor = color;
+      piece.style.animationDelay = delay + "s";
+      piece.style.animationDuration = duration + "s";
+      piece.style.transform = `rotate(${rotate}deg)`;
+
+      confettiLayer.appendChild(piece);
+    }
+
+    // hide confetti after a few seconds
+    setTimeout(() => {
+      if (confettiLayer) confettiLayer.style.display = "none";
+    }, 6000);
+  }
+
